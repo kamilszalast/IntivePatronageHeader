@@ -1,19 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
+import MainPage from "./pages/MainPage/MainPage";
+import LoginSite from "./pages/LoginSite/LoginSite";
 
 function App() {
   return (
     <div>
-      {/* <Layout> */}
-      <Routes>
-        <Route path="/" element={null}></Route>
-        <Route path="/" element={null}></Route>
-        <Route path="/" element={null}></Route>
-      </Routes>
-      {/* </Layout> */}
+      <Layout>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={MainPage()}></Route>
+            <Route path="/login" element={LoginSite()}></Route>
+            <Route path="/user-profile" element={null}></Route>
+          </Routes>
+        </BrowserRouter>
+      </Layout>
     </div>
   );
 }

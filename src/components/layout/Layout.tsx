@@ -1,5 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 
-export default function Layout() {
-  return <div></div>;
-}
+interface LayoutProps {}
+
+const Layout: FC<LayoutProps> = (props) => {
+  return <div>{props.children}</div>;
+};
+
+export default Layout;
