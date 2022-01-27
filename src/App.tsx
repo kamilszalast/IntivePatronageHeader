@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
@@ -13,7 +12,6 @@ function App() {
           <Routes>
             <Route path="/" element={MainPage()}></Route>
             <Route path="/login" element={LoginSite()}></Route>
-            <Route path="/user-profile" element={null}></Route>
           </Routes>
         </BrowserRouter>
       </Layout>
